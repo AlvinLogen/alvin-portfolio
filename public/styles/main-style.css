@@ -442,31 +442,6 @@ i {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1000px) {
-  .container--main__summary {
-    background-position: 100%;
-  }
-  .container--main__summary--content {
-    margin-left: calc(2rem + 1.5vw);
-  }
-  .container--main__summary--content__leadtext {
-    height: 8rem;
-  }
-  .container--main__summary--content__leadtext--item {
-    line-height: 8rem;
-  }
-  .container--main__summary--content__list {
-    height: 8rem;
-  }
-  .container--main__summary--content__list-item {
-    line-height: 8rem;
-  }
-  .container--main__summary--content__site {
-    margin-top: calc(2rem + 10vw);
-    line-height: 2rem;
-    letter-spacing: 0.2rem;
-  }
-}
 @media screen and (max-width: 800px) {
   .container--main__summary--content {
     margin-left: calc(4rem + 1.5vw);
@@ -514,8 +489,8 @@ i {
 }
 @media screen and (max-width: 400px) {
   .container--main__summary--content {
-    font-size: calc(1.2rem + 0.5vw);
-    margin-left: calc(2rem + 1.5vw);
+    font-size: 1rem;
+    margin-left: calc(1rem + 1vw);
   }
   .container--main__summary--content__leadtext {
     height: 8rem;
@@ -530,7 +505,7 @@ i {
     line-height: 8rem;
   }
   .container--main__summary--content__site {
-    margin-top: calc(1rem + 5vw);
+    margin-top: calc(1rem + 1vw);
     font-family: "Roboto";
   }
   .container--main__summary--content__site p:nth-child(2) {

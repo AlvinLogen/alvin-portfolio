@@ -109,35 +109,6 @@
   }
 }
 
-@include media-801 {
-  .container--main__summary {
-    background-position: 100%;
-
-    &--content {
-      margin-left: calc(2rem + 1.5vw);
-      &__leadtext {
-        height: 8rem;
-        &--item {
-          line-height: 8rem;
-        }
-      }
-
-      &__list {
-        height: 8rem;
-        &-item {
-          line-height: 8rem;
-        }
-      }
-
-      &__site {
-        margin-top: calc(2rem + 10vw);
-        line-height: 2rem;
-        letter-spacing: 0.2rem;
-      }
-    }
-  }
-}
-
 @include media-800 {
   .container--main__summary {
     &--content {
@@ -195,8 +166,8 @@
 @include media-400 {
   .container--main__summary {
     &--content {
-      font-size: font-size(font-size-small);
-      margin-left: calc(2rem + 1.5vw);
+      font-size: 1rem;
+      margin-left: calc(1rem + 1vw);
       &__leadtext {
         height: 8rem;
         &--item {
@@ -211,7 +182,7 @@
         }
       }
       &__site {
-        margin-top: calc(1rem + 5vw);
+        margin-top: calc(1rem + 1vw);
         font-family: font-style(font-secondary);
         p:nth-child(2) {
           font-size: 1.2rem;
