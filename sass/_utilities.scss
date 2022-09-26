@@ -1,0 +1,34 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.9rem;
+  background-color: var(--color-primary-dark);
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: font-weight(font-weight-light);
+  letter-spacing: 0.2rem;
+  font-size: font-size(font-size-small);
+}
+
+i {
+  color: var(--color-primary-dark);
+  font-size: font-size(font-size-medium);
+}
+
+.container--main {
+  display: grid;
+  grid-template-columns:
+    [container-start] repeat(4, 1fr)
+    [container-end];
+  grid-template-rows: min-content repeat(6, min-content);
+}

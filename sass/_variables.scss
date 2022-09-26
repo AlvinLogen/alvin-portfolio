@@ -1,0 +1,109 @@
+// ----------------------------------------------------Reset---------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// --------------------------------------------------Colour Themse---------------------------------------------------
+
+html {
+  --color-primary-xdark: rgb(0, 29, 61);
+  --color-primary-dark: rgb(0, 53, 102);
+  --color-primary-dark-m: rgba(0, 53, 102, 0.3);
+  --color-primary-light: rgb(0, 80, 157);
+  --color-primary-light-m: rgba(0, 80, 157, 0.45);
+  --color-secondary-dark: rgb(255, 195, 0);
+  --color-secondary-light: rgb(255, 214, 10);
+  --color-secondary-light-m: rgba(255, 214, 10, 0.45);
+  --color-white: rgb(255, 255, 255);
+  --color-odd: rgb(191, 210, 0);
+}
+
+html[data-theme="dark"] {
+  --color-primary-xdark: rgb(43, 45, 66);
+  --color-primary-dark: rgb(22, 26, 29);
+  --color-primary-dark-m: rgba(22, 26, 29, 0.3);
+  --color-primary-light: rgb(141, 153, 174);
+  --color-primary-light-m: rgba(141, 153, 174, 0.45);
+  --color-secondary-dark: rgb(239, 35, 60);
+  --color-secondary-light: rgb(230, 47, 2);
+  --color-secondary-light-m: rgba(220, 47, 2, 0.45);
+  --color-white: rgb(255, 255, 255);
+  --color-odd: rgb(101, 173, 5);
+}
+
+// --------------------------------------------------Font Families--------------------------------------------------
+$font-families: (
+  "font-primary": "Orbitron",
+  "font-secondary": "Roboto",
+);
+
+@function font-style($font-fam-style) {
+  @return map-get($map: $font-families, $key: $font-fam-style);
+}
+
+// --------------------------------------------------Font Weigths---------------------------------------------------
+
+$font-weights: (
+  "font-weight-thin": 100,
+  "font-weight-light": 300,
+  "font-weight-regular": 400,
+  "font-weight-medium": 500,
+  "font-weight-bold": 700,
+  "font-weight-xbold": 900,
+);
+
+@function font-weight($font-weight-style) {
+  @return map-get($map: $font-weights, $key: $font-weight-style);
+}
+
+// --------------------------------------------------Font Sizes-------------------------------------------------------
+
+$font-sizes: (
+  "font-size-xsmall": calc(1.2rem),
+  "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(2rem + 4vw),
+);
+
+@function font-size($font-size-style) {
+  @return map-get($map: $font-sizes, $key: $font-size-style);
+}
+
+// --------------------------------------------------Media Break Points-------------------------------------------------
+
+$break-points: (
+  "break-point-small": 400px,
+  "break-point-medium": 600px,
+  "break-point-large": 800px,
+  "break-point-xlarge": 1000px,
+);
+
+@function break-point($break-point-size) {
+  @return map-get($map: $break-points, $key: $break-point-size);
+}
+
+// --------------------------------------------------Utility Styles-------------------------------------------------
+
+%bg-image-props {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+%heading-h1 {
+  font-size: font-size(font-size-small);
+  font-weight: font-weight(font-weight-small);
+  letter-spacing: 0.2rem;
+}
+
+%sec-padding {
+  padding: 5vh 3vw;
+}

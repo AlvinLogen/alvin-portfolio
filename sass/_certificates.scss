@@ -1,0 +1,121 @@
+.container--main__certificates {
+  color: var(--color-white);
+  grid-column: container-start / container-end;
+  grid-row: 5 / 6;
+
+  @extend %sec-padding;
+
+  &--title {
+    font-family: font-style(font-primary);
+    color: var(--color-white);
+    font-size: font-size(font-size-medium);
+    @extend %heading-h1;
+    margin: 3rem;
+
+    span {
+      color: var(--color-secondary-dark);
+    }
+  }
+  &__content {
+    max-width: 100rem;
+    margin: 0 auto;
+
+    &--slider {
+      border: 0.3rem solid var(--color-secondary-light-m);
+      max-width: 80rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2vh 1vw;
+
+      &__slide {
+        display: none;
+
+        &--para {
+          font-size: font-size(font-size-small);
+          font-family: font-style(font-secondary);
+          font-weight: font-weight(font-weight-bold);
+          color: var(--color-odd);
+          text-align: center;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+        }
+
+        &--title {
+          font-family: font-style(font-primary);
+          line-height: 2.5rem;
+          letter-spacing: 0.2rem;
+          font-weight: font-weight(--front-weight-light);
+        }
+      }
+
+      &__slide.active {
+        display: block;
+        animation: slide 1s linear;
+      }
+    }
+
+    &--indicator {
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: calc(10rem + 6vw);
+        width: calc(10rem + 6vw);
+        object-fit: cover;
+        border-radius: 30%;
+        margin: 2vh 2vw;
+        border: 0.2rem solid var(--color-secondary-dark);
+        opacity: 0.4;
+        box-shadow: 2rem;
+        cursor: pointer;
+        transition: opacity 1s ease;
+      }
+      img.active {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@include media-800 {
+  .container--main__certificates {
+    margin: 3rem;
+    &__content {
+      padding: 3rem;
+      margin: 3rem;
+      &--indicator {
+        img {
+          height: calc(7rem + 5vw);
+          width: calc(7rem + 5vw);
+        }
+      }
+    }
+  }
+}
+
+@include media-600 {
+  .container--main__certificates {
+    &__content {
+      &--slider {
+        font-size: font-size(font-size-xsmall);
+        &--title {
+          line-height: 0.5rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

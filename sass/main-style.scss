@@ -1,0 +1,43 @@
+// -------------------------------------Media Query Settings-------------------------------------------------------
+@mixin media-801 {
+  @media screen and(max-width:break-point(break-point-xlarge)) {
+    @content;
+  }
+}
+
+@mixin media-800 {
+  @media screen and(max-width:break-point(break-point-large)) {
+    @content;
+  }
+}
+
+@mixin media-600 {
+  @media screen and(max-width:break-point(break-point-medium)) {
+    @content;
+  }
+}
+
+@mixin media-400 {
+  @media screen and(max-width:break-point(break-point-small)) {
+    @content;
+  }
+}
+
+// -------------------------------------Variable and Style Imports---------------------------------------------------
+@import "variables";
+@import "utilities";
+@import "header";
+@import "summary";
+@import "projects";
+@import "skills";
+@import "certificates";
+@import "footer";
+
+// -------------------------------------Dark/Light Mode Transition---------------------------------------------------
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.4s !important;
+  transition-delay: 0 !important;
+}

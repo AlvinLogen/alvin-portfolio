@@ -1,0 +1,170 @@
+.container--main__skills {
+  font-family: font-style(font-primary);
+  color: var(--color-white);
+  background-color: var(--color-primary-xdark);
+
+  grid-column: container-start / container-end;
+  grid-row: 4 / 5;
+
+  @extend %sec-padding;
+
+  &--title {
+    font-size: font-size(font-size-medium);
+    @extend %heading-h1;
+    margin: 4rem 4rem 4rem 3rem;
+
+    span {
+      color: var(--color-secondary-dark);
+    }
+  }
+
+  &--content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__analysis,
+    &__development {
+      color: var(--color-white);
+      padding: calc(1rem + 2vw);
+      text-transform: uppercase;
+      flex-basis: 40rem;
+      flex-grow: 1;
+    }
+
+    &__analysis--title,
+    &__development--title {
+      font-size: font-size(font-size-medium);
+      margin-bottom: 4rem;
+    }
+
+    &__analysis h4,
+    &__development h4 {
+      font-family: font-style(font-secondary);
+      font-size: font-size(font-size-small);
+      padding-bottom: 1.2rem;
+    }
+
+    &__analysis--progress,
+    &__development--progress {
+      margin: 2rem 0;
+      position: relative;
+      display: block;
+      padding: 1rem;
+      border-radius: 3rem;
+      background-color: var(--color-primary-dark);
+      width: 100%;
+
+      span {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 2rem;
+        border-radius: 3rem;
+        background-color: var(--color-odd);
+      }
+    }
+    &__analysis--progress__1 {
+      width: 60%;
+    }
+    &__analysis--progress__2 {
+      width: 75%;
+    }
+    &__analysis--progress__3 {
+      width: 60%;
+    }
+    &__analysis--progress__4 {
+      width: 30%;
+    }
+
+    &__development--progress__1 {
+      width: 60%;
+    }
+    &__development--progress__2 {
+      width: 30%;
+    }
+    &__development--progress__3 {
+      width: 25%;
+    }
+    &__development--progress__4 {
+      width: 75%;
+    }
+  }
+}
+
+@include media-800 {
+  .container--main__skills {
+    &--title {
+      margin: 3rem;
+    }
+    &--content {
+      &__analysis--title,
+      &__development--title {
+        font-size: font-size(font-size-small);
+        margin-bottom: 2rem;
+      }
+      &__analysis h4,
+      &__development h4 {
+        font-family: font-style(font-secondary);
+        font-size: font-size(font-size-xsmall);
+        padding-bottom: 0.5rem;
+      }
+      &__analysis--progress,
+      &__development--progress {
+        margin: 1rem 0;
+        padding: 0.5rem;
+
+        span {
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-600 {
+  .container--main__skills {
+    &--title {
+      margin: 3rem;
+    }
+    &--content {
+      &__analysis--title,
+      &__development--title {
+        margin-bottom: 1rem;
+      }
+      &__analysis h4,
+      &__development h4 {
+        font-size: font-size(font-size-xsmall);
+        padding-bottom: 0.2rem;
+      }
+      &__analysis--progress,
+      &__development--progress {
+        padding: 0.3rem;
+      }
+    }
+  }
+}
+
+@include media-400 {
+  .container--main__skills {
+    &--title {
+      margin: 1rem 2rem;
+    }
+
+    &--content {
+      &__analysis,
+      &__development {
+        padding: 1rem;
+      }
+      &__analysis h4,
+      &__development h4 {
+        font-size: 0.2rem;
+        padding-bottom: 0.1rem;
+      }
+      &__analysis--progress,
+      &__development--progress {
+        padding: 2rem;
+      }
+    }
+  }
+}
